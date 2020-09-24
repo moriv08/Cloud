@@ -1,1 +1,5 @@
 /.idea
+/src/main/resources/
+#JavaCore_3.1.zip
+/target/classes/
+#JavaCore_3.1.zip
