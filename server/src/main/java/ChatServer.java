@@ -35,11 +35,11 @@ public class ChatServer {
         }
     }
     
-    public void broadcast(String msg) throws IOException{
-        for (ClientHandler client: queue) {
-            client.sendMsg(msg);
-        }
-    }
+//    public void broadcast(String msg) throws IOException{
+//        for (ClientHandler client: queue) {
+//            client.sendMsg(msg);
+//        }
+//    }
 
     public void remove(ClientHandler client) {
         queue.remove(client);

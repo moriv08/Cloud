@@ -16,6 +16,7 @@
 <!--    </HBox>-->
 <!--    <TextArea fx:id="textArea" editable="true" VBox.vgrow="ALWAYS" />-->
     <ListView fx:id="list"/>
+    <TextArea fx:id="serverMsg" editable="false"/>
     <HBox fx:id="bottomPanel" visible="true" managed="true">
         <TextField fx:id="textField" onAction="#sendMsg" promptText="Введите текст" HBox.hgrow="ALWAYS" />
         <Button fx:id="btn1"  onAction="#sendMsg" text="Send" />

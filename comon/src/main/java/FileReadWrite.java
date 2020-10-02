@@ -5,12 +5,11 @@ public class FileReadWrite {
 
         String path = "comon/src/main/resources/";
 
-//        File src = new File(path + "JavaCore_3.1.zip");
-//        File dest = new File(path + "JavaCore_3.1_copy.zip");
+        File src = new File(path + "JavaCore_3.1.zip");
+        File dest = new File(path + "JavaCore_3.1_copy.zip");
 
-
-        File src = new File(path + "foto.jpg");
-        File dest = new File(path + "foto_copy.jpg");
+//        File src = new File(path + "foto.jpg");
+//        File dest = new File(path + "foto_copy.jpg");
 
             makeFile(src, dest);
 
@@ -26,15 +25,16 @@ public class FileReadWrite {
             OutputStream out = new FileOutputStream(dest)
             ){
 
-            int x;
-
-            while ((x = in.read()) != -1)
-                out.write(x);
-
-//            byte[] buffer = new byte[1024];
+//            int x;
 //
-//            while (reader.read(buffer) != -1)
-//                writer.write(buffer);
+//            while ((x = in.read()) != -1)
+//                out.write(x);
+
+            byte[] buffer = new byte[8192];
+            int count;
+
+            while ((count = in.read(buffer)) != -1)
+                out.write(buffer, 0, count);
 
         }catch (IOException e){
             e.printStackTrace();

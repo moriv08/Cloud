@@ -1,6 +1,9 @@
 /.idea
 /comon/src/main/resources/
 /comon/target/classes/
+/server/ServerStorage/
+/client/ClientStorage/
 .gitignore.swp
+
 
 
